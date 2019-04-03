@@ -31,15 +31,15 @@ public class CoffeeMachine extends JFrame{
 		this.setSize(230, 150);
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
-		this.setTitle("¿§·È»ú");
+		this.setTitle("å’–å•¡æœº");
 		FlowLayout layout = new FlowLayout();
 		this.setLayout(layout);
 		button=new JButton();
 		button.addActionListener(new ButtonListener());
 		add(button);
-		String title = "Í¶±Òinsert coins";
+		String title = "æŠ•å¸insert coins";
 		setButtonTitles(title);
-		information = new JTextField("»¶Ó­Ê¹ÓÃ¿§·È×Ô¶¯ÊÛ»õ»ú£¡");
+		information = new JTextField("æ¬¢è¿ä½¿ç”¨å’–å•¡è‡ªåŠ¨å”®è´§æœºï¼");
 		information.setEnabled(false);
 		information.setDisabledTextColor(Color.red);
 		add(information);
@@ -85,10 +85,10 @@ public class CoffeeMachine extends JFrame{
 		@Override
 		public void response() {
 			// TODO Auto-generated method stub
-			String title = "Í¶±Òinsert coins";
+			String title = "æŠ•å¸insert coins";
 			setButtonTitles(title);
 			clearMessage();
-			showMessage("»¶Ó­Ê¹ÓÃ¿§·È×Ô¶¯ÊÛ»õ»ú£¡");
+			showMessage("æ¬¢è¿ä½¿ç”¨å’–å•¡è‡ªåŠ¨å”®è´§æœº");
 		}
 	}
 	class Coinin implements State{
@@ -105,14 +105,14 @@ public class CoffeeMachine extends JFrame{
 		@Override
 		public void response() {
 			// TODO Auto-generated method stub
-			JOptionPane.showMessageDialog(null,"¿§·ÈÕıÔÚÅëÖÆ£¬ÇëÎğÍ¶±Ò£¡");
+			JOptionPane.showMessageDialog(null,"å’–å•¡æ­£åœ¨çƒ¹åˆ¶ï¼Œè¯·å‹¿æŠ•å¸ï¼");
 			int coffeeNum=getCoffeeNum()-1;
 			setCoffeeNum(coffeeNum);
 			sleep();
-			String title = "È¡×ßtake it";
+			String title = "å–èµ°take it";
 			setButtonTitles(title);
 			clearMessage();
-			showMessage("ÇëÈ¡×ß¿§·È£¬»¶Ó­ÏÂ´ÎÊ¹ÓÃ£¡");}
+			showMessage("è¯·å–èµ°å’–å•¡ï¼Œæ¬¢è¿ä¸‹æ¬¡ä½¿ç”¨ï¼");}
 		}
 		public void  sleep(){
 			try{
@@ -126,7 +126,7 @@ public class CoffeeMachine extends JFrame{
 		@Override
 		public void onClick() {
 			// TODO Auto-generated method stub
-			int n =JOptionPane.showConfirmDialog(null,"ÊÇ·ñ¼ÓÁÏ","¼ÓÁÏ",JOptionPane.YES_NO_OPTION);
+			int n =JOptionPane.showConfirmDialog(null,"æ˜¯å¦åŠ æ–™","åŠ æ–™ç¡®è®¤",JOptionPane.YES_NO_OPTION);
 			if(n== JOptionPane.YES_OPTION) {
 				int coffeeNum=3;
 				setCoffeeNum(coffeeNum);
@@ -137,10 +137,10 @@ public class CoffeeMachine extends JFrame{
 		@Override
 		public void response() {
 			// TODO Auto-generated method stub
-			String title = "Í¶±Òinsert coins";
+			String title = "æŠ•å¸insert coins";
 			setButtonTitles(title);
 			clearMessage();
-			showMessage("¿§·ÈÒÑ¾­ÊÛóÀ£¬ÇëÎğÍ¶±Ò£¡");
+			showMessage("å’–å•¡å·²ç»å”®ç½„ï¼Œè¯·å‹¿æŠ•å¸ï¼");
 		}
 	}
 	public static void main(String args[]){
